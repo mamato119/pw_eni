@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Work 3.1</title>
+  <link rel="stylesheet" href="stile.css">
+</head>
+<body>
+  <!-- Viene definita la testata (header) della pagina -->
+  <header class="header">
+    <!-- La classe "title-box" viene utilizzata per il titolo della pagina messo in sofrapposizione all'immagine di sfondo presente nell'header -->
+	<div class="title-box">
+      <h1>Project Work 3.1<br/> Download report di sostenibilità ENI S.p.A.</h1>
+    </div>
+  </header>
+  <div class="separator"></div>
+  <main class="main">
+    <section class="content">
+      <div class="collapsible">
+        <div class="title">Report di sostenibilità ANNO 2023</div>
+        <div class="content">
+          <p class="description">E' stato pubblicato il report di sostenibilità ENI FOR 2023</p>
+          <a href="eni-for-2023-performance-sostenibilita-ita-stampa.pdf" class="download-link">Scarica il report</a>
+        </div>
+      </div>
+      <div class="collapsible">
+        <div class="title">Report di sostenibilità ANNO 2022</div>
+        <div class="content">
+          <p class="description">E' stato pubblicato il report di sostenibilità ENI FOR 2022</p>
+          <a href="eni-for-2022-performance-sostenibilita-ita-stampa.pdf" class="download-link">Scarica il report</a>
+        </div>
+      </div>
+      <div class="collapsible">
+        <div class="title">Report di sostenibilità ANNO 2021</div>
+        <div class="content">
+          <p class="description">E' stato pubblicato il report di sostenibilità ENI FOR 2021</p>
+          <a href="eni-for-2021-performance-sostenibilita-ita.pdf" class="download-link">Scarica il report</a>
+        </div>
+      </div>
+      <div class="collapsible">
+        <div class="title">Report di sostenibilità ANNO 2020</div>
+        <div class="content">
+          <p class="description">E' stato pubblicato il report di sostenibilità ENI FOR 2020</p>
+          <a href="Eni-for-2020-Performance-di-sostenibilita.pdf" class="download-link">Scarica il report</a>
+        </div>
+      </div>
+      <div class="collapsible">
+        <div class="title">Report di sostenibilità ANNO 2019</div>
+        <div class="content">
+          <p class="description">E' stato pubblicato il report di sostenibilità ENI FOR 2019</p>
+          <a href="Eni-for-2019-Performance-di-sostenibilita.pdf" class="download-link">Scarica il report</a>
+        </div>
+      </div>
+      <div class="collapsible">
+        <div class="title">Report di sostenibilità ANNO 2018</div>
+        <div class="content">
+          <p class="description">E' stato pubblicato il report di sostenibilità ENI FOR 2018</p>
+          <a href="EniFor-2018-report.pdf" class="download-link">Scarica il report</a>
+        </div>
+      </div>
+      <div class="collapsible">
+        <div class="title">Report di sostenibilità ANNO 2017</div>
+        <div class="content">
+          <p class="description">E' stato pubblicato il report di sostenibilità ENI FOR 2017</p>
+          <a href="EniFor-2017-report.pdf" class="download-link">Scarica il report</a>
+        </div>
+      </div>
+      <div class="collapsible">
+        <div class="title">Report di sostenibilità ANNO 2016</div>
+        <div class="content">
+          <p class="description">E' stato pubblicato il report di sostenibilità ENI FOR 2016</p>
+          <a href="EniFor_2016.pdf" class="download-link">Scarica il report</a>
+        </div>
+      </div>
+      <div class="collapsible">
+        <div class="title">Report di sostenibilità ANNO 2015</div>
+        <div class="content">
+          <p class="description">E' stato pubblicato il report di sostenibilità ENI FOR 2015</p>
+          <a href="eni_for_2015_report_web_.pdf" class="download-link">Scarica il report</a>
+        </div>
+      </div>	  
+    </section>
+  </main>
+  <footer class="footer">Tema n. 3: Tecnologia web per la sostenibilità d’impresa - PW n. 3.1 Sviluppo di una pagina web per il download dei report di sostenibilità di un’impresa del settore terziario</footer>
+
+  <script>
+    document.querySelectorAll('.collapsible .title').forEach(title => {
+      title.addEventListener('click', function() {
+        const content = this.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+</html>

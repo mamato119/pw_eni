@@ -1,0 +1,113 @@
+    /* Viene effettuato un Reset di base dei parametri della pagina */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+	/* Settiamo i parametri font-family e line-height all'interno del body per applicarli a tutta la pagina */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* stile per la formattazione dell'header */
+    .header {
+      background-image: url('sost_sfondo.jpg'); /* viene impostata l'immagine di sfondo dell'header */
+      background-size: cover; /* utilizzato per adattare l'immagine di sfondo alle dimensioni della pagine in ottica Responsive */
+      background-position: center; /* viene centrata la posizione dell'immagine di sfondo */ 
+      color: white; /* viene impostato il colore del testo in BIANCO */
+      text-align: center; /* si definisce l'allineamento del testo, a centrato */
+      padding: 4rem; /* Aumentata l'altezza dell'header. Viene impostata a 4 volte la dimensione del font impostato (rem) */
+      position: relative; /* viene impostato a relative in quanto successivamente è stato impostato ad absolute il title-box (figlio) che sarà quindi posizionato sulla base di questo*/
+      height: 50vh; /* viene impostata l'altezza dell'header al 50% della finestra di visualizzazione. Viene usato vh per rendere la pagina Responsive su tutti i dispositivi */
+    }
+
+    .header .title-box {
+      position: absolute;
+      top: 50%;
+      left: 2rem; /* Spostata a sinistra */
+      transform: translateY(-50%); /* serve per centrare il title-box all'interno dell'header */
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 1rem;
+      border-radius: 8px; /* utilizzato per rendere i bordi arrotondati */
+      max-width: 400px; /* viene impostata la larghezza massima dell'elemnte title-box, in ottica Responsive */
+      text-align: left; /* Allineamento del testo a sinistra */
+    }
+	/* Qui viene definito il piccolo separatore tra header e main */
+    .separator {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 0.5rem;
+    }
+
+    .main {
+      padding: 2rem;
+    }
+
+    .content {
+      background-color: #f4f4f4;
+      padding: 1rem;
+      border: 1px solid #ddd; /* definisce lo stile dei bordi per creare un riquadro */
+      border-radius: 8px; /* arrotonda i bordi */
+    }
+	/* le classi successive formattano i box collassabili per la navigazione della pagina attraverso gli anni */
+    .collapsible {
+      border: 1px solid #ccc; /* definisce lo stile del bordo */
+      border-radius: 8px; /* arrotonda i bordi */
+      overflow: hidden; /* serve per fare in modo che eventuale testo aggiuntivo venga nascosto e non modifichi le dimensioni del box */
+      background-color: #e8f5e9;
+      margin-bottom: 1rem;
+    }
+	
+    .collapsible .title { /* definisce lo stile del titolo all'interno del box */
+      background-color: #81c784;
+      color: white;
+      padding: 1rem;
+      cursor: pointer; /* modifica il cursore che verrà mostrato per comunicare all'utente che al click del mouse si espande il box */
+      font-size: 1.2rem; /* viene impostato un font-size più grande rispetto al settaggio base */
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .collapsible .content {
+      display: none; /* viene nascosto il contenuto del box. Attraverso uno Javascript viene poi gestito l'evento di click per mostrare il contenuto quando richiesto */
+      padding: 1rem;
+      background-color: white;
+    }
+
+    .collapsible .content .description { /* questo è lo stile per la formattazione della didascalia all'interno del box */
+      margin-bottom: 1rem;
+      font-size: 1rem; 
+      color: #333;
+    }
+
+    .collapsible .content .download-link { /* questo stile serve per la formattazione del pulsante di download */
+      display: inline-block; /* viene impostato il display ad inline-block per consentire il dimensionamento corretto del pulsante di download attraverso l'uso del padding */
+      padding: 0.5rem 1rem; /* viene impostato il dimensionamento del pulsante */
+      background-color: #4caf50;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px; /* arrotonda i bordi */
+      font-weight: bold;
+    }
+
+    .collapsible .content .download-link:hover { /* usato per consentire il cambio colore di sfondo quando il cursore è sopra il link per il download */
+      background-color: #388e3c; 
+    }
+	/* Qui terminano gli stili per la formattazione dei box collassabili */
+    .footer { /* questa classe serve per la formattazione del footer in fondo alla pagina */
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    /* Responsività */
+    @media (min-width: 768px) { /* si usa la media query per garantire la corretta visione della pagina anche su schermi grandi */
+      .main {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+    }
