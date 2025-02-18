@@ -1,27 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
+<!-- Si definisce la codifica dei caratteri in utf-8. In questo modo il testo, compresi caratteri speciali come accenti, simboli, emoji, lettere non latine verranno visualizzati correttamente in qualsiasi parte del mondo  -->
   <meta charset="UTF-8">
+<!--Tag utilizzato per configurare la visualizzazione responsive su dispositivi mobili. È stato impostato una initial-scale a 1.0 per far si che la pagina sia prima di zoom al caricamento. Il TAG è fondamentale per far si che la pagina si adatti automaticamente alle dimensioni dello schermo del dispositivo utente e pertanto garantisce un’esperienza utente ottimale -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Work 3.1</title>
+  <title>Project Work 3.1 – Mario Amato</title>
+<!—Si include lo stylesheet realizzato in precedenza --> 
   <link rel="stylesheet" href="stile.css">
 </head>
 <body>
   <!-- Viene definita la testata (header) della pagina -->
   <header class="header">
-    <!-- La classe "title-box" viene utilizzata per il titolo della pagina messo in sofrapposizione all'immagine di sfondo presente nell'header -->
+    <!-- La classe "title-box" viene utilizzata per il titolo della pagina messo in sovrapposizione all'immagine di sfondo presente nell'header -->
 	<div class="title-box">
       <h1>Project Work 3.1<br/> Download report di sostenibilità ENI S.p.A.</h1>
     </div>
   </header>
+  <!-- La classe separator viene utilizzata per creare una piccola separazione tra la testata ed il main -->
   <div class="separator"></div>
+  <!-- Qui inizia il main della pagina che conterrà il contenuto principale della pagina -->
   <main class="main">
+    <!-- la classe "content" identifica il contenuto all'interno del main con la possibilità di navigazione tra i vari anni per il download dei report -->
     <section class="content">
-      <div class="collapsible">
-        <div class="title">Report di sostenibilità ANNO 2023</div>
-        <div class="content">
-          <p class="description">E' stato pubblicato il report di sostenibilità ENI FOR 2023</p>
-          <a href="eni-for-2023-performance-sostenibilita-ita-stampa.pdf" class="download-link">Scarica il report</a>
+      <!-- Per la navigazione tra gli anni è stato scelto un layout a blocchi collassabili per rendere la navigazione nella pagine più veloce ed intuitiva -->
+	  <div class="collapsible">
+        <!-- Titolo del box collassabile -->
+		<div class="title">Report di sostenibilità ANNO 2023</div>
+        <!-- Contenuto principale del box -->
+		<div class="content">
+          <!-- Qui è stato inserito un paragrafo con una didascalia per descrivere il download che si propone -->
+		  <p class="description">E' stato pubblicato il report di sostenibilità ENI FOR 2023</p>
+          <!-- Il collegamento al report di sostenibilità per l'anno selezionato -->
+		  <a href="eni-for-2023-performance-sostenibilita-ita-stampa.pdf" class="download-link">Scarica il report</a>
         </div>
       </div>
       <div class="collapsible">
@@ -82,13 +93,17 @@
       </div>	  
     </section>
   </main>
-  <footer class="footer">Tema n. 3: Tecnologia web per la sostenibilità d’impresa - PW n. 3.1 Sviluppo di una pagina web per il download dei report di sostenibilità di un’impresa del settore terziario</footer>
+  <!-- Qui è stata inserita il footer, dove sono stati inserite le informazioni per il contenuto finale della pagina -->
+  <footer class="footer">Tema n. 3: Tecnologia web per la sostenibilità d’impresa - PW n. 3.1 Sviluppo di una pagina web per il download dei report di sostenibilità di un’impresa del settore terziario - Mario Amato 0312201436</footer>
 
+  <!-- Script per permettere il funzionamento dei box collassabili. 
+		E' stato utilizzato il querySelectorAll per cercare tutti gli elementi con la classe .collapsible .title (titoli dei box collassabili)
+		e per ogn'uno di loro, utilizzando il forEash è stato aggiunto un EventListner al click del mouse -->
   <script>
     document.querySelectorAll('.collapsible .title').forEach(title => {
       title.addEventListener('click', function() {
         const content = this.nextElementSibling;
-        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        content.style.display = content.style.display === 'block' ? 'none' : 'block'; /* Viene utilizzata un'espressione ternaria per "negare" il valore del display ad ogni click del mouse, in maniera tale da mostrare se nascosto e nascondere se mostrato. */
       });
     });
   </script>
